@@ -93,10 +93,18 @@ body{
   font-weight: 800;
   text-align: center;
 }
+.scores{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 hr{
   width: 95%;
-  height: 4px;
+  height: 2px;
   background-color: #1882a5;
+  outline: none;
+  border: none;
 }
 
 .form .players .player .scores {
