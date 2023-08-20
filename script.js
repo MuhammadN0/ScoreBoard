@@ -1,13 +1,13 @@
-// let numPlayers =  window.prompt('How many Players?')
-// if (numPlayers < 1) {
-//   window.alert('Please enter a valid number of players')
-//   window.location.reload();
-// }
-// let players = Array.from({length:numPlayers}, (player,index) => player = window.prompt(`Name of player number ${index + 1}`))
+let numPlayers =  window.prompt('How many Players?')
+if (numPlayers < 1) {
+  window.alert('Please enter a valid number of players')
+  window.location.reload();
+}
+let players = Array.from({length:numPlayers}, (player,index) => player = window.prompt(`Name of player number ${index + 1}`))
 
 //Test
-let numPlayers = 3;
-let players = ['Hossam', 'Ali', 'Muhammad'];
+// let numPlayers = 3;
+// let players = ['Hossam', 'Ali', 'Muhammad'];
 
 let playerObjects = players.map((e) => {
   return {
