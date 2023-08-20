@@ -1,13 +1,13 @@
-let numPlayers =  window.prompt('How many Players?')
-if (numPlayers < 1) {
-  window.alert('Please enter a valid number of players')
-  window.location.reload();
-}
-let players = Array.from({length:numPlayers}, (player,index) => player = window.prompt(`Name of player number ${index + 1}`))
+// let numPlayers =  window.prompt('How many Players?')
+// if (numPlayers < 1) {
+//   window.alert('Please enter a valid number of players')
+//   window.location.reload();
+// }
+// let players = Array.from({length:numPlayers}, (player,index) => player = window.prompt(`Name of player number ${index + 1}`))
 
-// //Test
-// let numPlayers = 3;
-// let players = ['Hossam', 'Ali', 'Muhammad'];
+//Test
+let numPlayers = 3;
+let players = ['Hossam', 'Ali', 'Muhammad'];
 
 let playerObjects = players.map((e) => {
   return {
@@ -85,3 +85,25 @@ function compare() {
       )
   ).isLoser = true;
 }
+
+let reset = document.getElementById('reset')
+reset.addEventListener('click', (e) =>{
+  e.preventDefault()
+  playersDivs.forEach((e) => {
+    e.classList.remove('winner');
+    e.classList.remove('loser');
+  });
+  playerObjects = playerObjects.map((player, index) => ({
+    ...player,
+    score: 0,
+    isWinner: false,
+    isLoser: false,
+  }));
+  playerObjects.forEach((player, index) => {
+    let score = document.createElement('p');
+    score.className = 'score';
+    score.innerText = player.score;
+    playersDivsScores[index].appendChild(score);
+  });
+  inputs.forEach(input => input.value = 0)
+})
