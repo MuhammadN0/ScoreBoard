@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+:root{
+  --main-color: #1882a5;
+  --second-color: rgb(60, 159, 193);
+  --third-color: rgb(42, 105, 126);
+}
+
+.nav{
+  background-color: var(--main-color);
+  padding: 15px;
+  color: white;
+}
+
+/* 
+::-webkit-scrollbar{
+  display: none;
+} */
+
+.form{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #eee;
+  overflow: scroll;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 3px 3px 3px rgba(0,0,0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.form .players{
+  display: flex;
+  gap: 10px;
+}
+
+.form .players .player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.form .players .player .score:last-of-type{
+  color: var(--second-color);
+}
+
+.form .players .player.winner .score:last-of-type{
+  font-weight: bolder;
+}
+.form .players .player.loser .score:last-of-type{
+  color: red;
+}
+
+.form .submitter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  gap: 10px;
+}
+
+.form .submitter button{
+  appearance: none;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 3px;
+  box-shadow: 2px 1px 1px #1882a562;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.form .submitter .submit{
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+.form .players .player input {
+  appearance: none;
+  border: none;
+  padding: 5px;
+  font-weight: 800;
+  text-align: center;
+}
