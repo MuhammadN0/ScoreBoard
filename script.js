@@ -37,6 +37,8 @@ playerObjects.forEach((player) => {
 let inputs = document.querySelectorAll('input');
 let playersDivsScores = document.querySelectorAll('.player .scores');
 let playersDivs = document.querySelectorAll('.player');
+
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   playersDivs.forEach((e) => {
@@ -99,6 +101,7 @@ reset.addEventListener('click', (e) =>{
     isWinner: false,
     isLoser: false,
   }));
+  playersDivsScores.forEach(e => e.appendChild(document.createElement('hr')))
   playerObjects.forEach((player, index) => {
     let score = document.createElement('p');
     score.className = 'score';

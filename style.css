@@ -93,3 +93,13 @@ body{
   font-weight: 800;
   text-align: center;
 }
+hr{
+  width: 95%;
+  height: 4px;
+  background-color: #1882a5;
+}
+
+.form .players .player .scores {
+  width: 100%;
+  text-align: center;
+}
